@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<p><span class="comments">/**</span><br />
+			    <span class="space"/><span class="comments">* Dear Ms Cat . </span><span class="comments">Tonight is Silent Night,</span><br />
+				  <span class="space"/><span class="comments">* But you are at home and I can't stay with you ,so I made this to say Merry Christmas to you,my loved one.</span><br />
+				  <span class="space"/><span class="comments">*/</span><br />
+				i =Boy(<span class="string">"Mr Rabbit"</span>);<br />
+				u =Girl(<span class="string">"Ms Cat"</span>);<br />
+				<span class="comments">// Oct 9, 2012, I meet you and a few days later I told you I love you. </span><br />
+				i.love(u);<br />
+				<span class="comments">// I thought it would be a happy story,Unfortunately<SPAN id="rptErrSucceed"></SPAN>, something unhappy happened and I became the loser.</span><br />
+				u.are getting away();<br />
+				<span class="comments">// Since then, I miss u every day.</span><br />
+				i.miss(u);<br />
+				<span class="comments">// Wait and take care of u and my love.Hoping one day you can come back to my side and the day is not too far,cause I don't know what would happen in the future.</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// You say that maybe you will come to my side even though it won't be so easy.</span><br />
+				<span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
+				<span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
+				<span class="keyword">while</span> (isHesitate) {<br />
+				<span class="placeholder"/>i.waitFor(u);<br />
+				<span class="placeholder"/><span class="comments">// I think it is an important decision</span><br />
+				<span class="placeholder"/><span class="comments">// cause I want to be your boyfiend/husband/the one.</span><br />
+				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
+				}<br />
+				<span class="comments">// I am sure ,in the end ,after a romantic wedding, we will live happily ever after.</span><br />
+				i.marry(u);<br />
+				i.liveHappilyWith(u);<br />
+				</p>
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Ms Cat, I have meet you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Mr Rabbit</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright"></div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2012, 9, 9);
+		together.setHours(18);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
